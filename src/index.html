@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test project</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+</head>
+
+<body>
+  <header>
+    <div class="user-profile"></div>
+    <nav role="navigation">
+      <div id="menuToggle">
+        <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+        <input id="hamburgerMenu" type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <li> <a id="allUserMobile">Show users</a></li>
+          <li> <a id="createUserMobile">Create users</a></li>
+          <li> <a id="updateUserMobile">Update users</a></li>
+          <li> <a id="getUserMobile">Get users</a></li>
+          <li> <a href="aboutUs.html">About us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+  <div class="wrapper">
+    <aside class="side-navigation-wrapper">
+      <ul class="side-navigation">
+        <li>
+          <a id="allUser" class="active-link">Show users</a>
+        </li>
+        <li>
+          <a id="createUser">Create users</a>
+        </li>
+        <li>
+          <a id="updateUser">Update users</a>
+        </li>
+        <li>
+          <a id="getUser">Get users</a>
+        </li>
+      </ul>
+      <a href="aboutUs.html" class="about-us-link">About us</a>
+    </aside>
+
+    <section class="main-section user-list-component">
+      <h1>Users list</h1>
+      <div class="user-list-wrapper">
+
+      </div>
+    </section>
+    <section class="main-section create-user-component" style="display: none">
+      <h1>Create user</h1>
+      <form id="createUserWrapper" class="form-create-update-wrapper">
+        <input name="userName" placeholder="Username" type="text" required>
+        <input name="email" placeholder="Email" type="email" required>
+        <input name="password" placeholder="Password" type="password" required>
+        <input id="createUserSubmit" type="submit" value="Create">
+      </form>
+    </section>
+    <section class="main-section update-user-component" style="display: none">
+      <h1>Update user</h1>
+      <form id="updateUserWrapper" class="form-create-update-wrapper">
+        <input name="userName" placeholder="Username" type="text" required>
+        <input name="email" placeholder="Email" type="email" required>
+        <input name="password" placeholder="Password" type="password" required>
+        <input id="updateUserId" name="id" placeholder="Id" type="text" required>
+        <input id="updateUserSubmit" type="submit" value="Update">
+      </form>
+    </section>
+    <section class="main-section get-user-component" style="display: none">
+      <h1>Get user by id</h1>
+      <div class="form-create-update-wrapper form-get-user-wrapper">
+        <input id="searchInput" placeholder="Write user id" type="text">
+        <input id="searchUserByIdSubmit" type="submit" value="Show">
+      </div>
+      <div class="get-user-by-id-wrapper">
+
+      </div>
+    </section>
+  </div>
+  <div class="loader" style="display: none"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="scripts/main.js" type="module"></script>
+</body>
+</html>

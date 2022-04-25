@@ -1,0 +1,18 @@
+{
+  "name": "project",
+  "private": true,
+  "description": "",
+  "author": "",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "browser-sync start --server \"src\" --files \"src\" --open \"external\" --no-notify --no-ghost-mode",
+    "proxy": "lcp --proxyUrl https://zentesting.herokuapp.com/"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.9",
+    "local-cors-proxy": "^1.1.0"
+  },
+  "type": "module"
+}
+
